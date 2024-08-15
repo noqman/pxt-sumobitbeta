@@ -23,6 +23,14 @@ const REG_ADD_RESET = 14;
 //% weight=10 color=#ff8000 icon="\uf085" block="SUMO:BIT"
 //% groups=['DC Motors', 'Servos', 'RGB LED']
 namespace sumobit {
+
+brakeMotor(MotorChannel.M1);
+brakeMotor(MotorChannel.M2);
+
+// Disable the servos.
+disableServo(ServoChannel.S1);
+disableServo(ServoChannel.S2);
+
 /**
  * Limit the range of a number.
  * @param value The number we want to limit.
@@ -30,7 +38,7 @@ namespace sumobit {
  * @param max Maximum value of the number.
  */
 //% blockHidden=true
-//% blockId=rekabit_limit
+//% blockId=sumobit_limit
 export function limit(value: number, min: number, max: number): number {
     if (value < min) {
         value = min;
@@ -47,7 +55,7 @@ export function limit(value: number, min: number, max: number): number {
      * @param register Register address.
      */
 //% blockHidden=true
-//% blockId=rekabit_i2c_read
+//% blockId=sumobit_i2c_read
 export function i2cRead(register: number): number {
     let value = 0;
     pins.i2cWriteNumber(I2C_ADDRESS, register, NumberFormat.UInt8LE, true);
@@ -63,7 +71,7 @@ export function i2cRead(register: number): number {
  * @param data Data to write.
  */
 //% blockHidden=true
-//% blockId=rekabit_i2c_write
+//% blockId=sumobit_i2c_write
 export function i2cWrite(register: number, data: number): void {
     let buffer = pins.createBuffer(2);
     buffer[0] = register;

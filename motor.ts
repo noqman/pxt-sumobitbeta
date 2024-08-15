@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Functions for REKA:BIT servos and motors driver.
+ * Functions for SUMO:BIT servos and motors driver.
  *
  * Company: Cytron Technologies Sdn Bhd
  * Website: http://www.cytron.io

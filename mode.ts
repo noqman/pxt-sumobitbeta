@@ -28,7 +28,7 @@ export function readModeValue(): number {
 //% weight=14
 //% blockGap=40
 //% blockId=sumobit_check_mode_value
-//% block="Mode % modevalue"
+//% block="Mode %modevalue"
 //% modevalue.min=0 modevalue.max=15
 export function checkMode(modevalue: number): boolean {
 let result = false;

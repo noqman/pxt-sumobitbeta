@@ -10,8 +10,7 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "motor.ts",
-        "mode.ts"
+        "motor.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -23,5 +22,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }

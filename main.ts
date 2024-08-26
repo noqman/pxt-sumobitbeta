@@ -18,10 +18,10 @@ const REG_ADD_DIP = 13;
 const REG_ADD_RESET = 14;
 
 /**
-* Blocks for SUMO:BIT servos and motors driver.
+* Blocks for SUMO:BIT.
 */
 //% weight=10 color=#ff8000 icon="\uf085" block="SUMO:BIT"
-//% groups=['DC Motors', 'Servos', 'RGB LED']
+//% groups=['DC Motors', 'Servos' , 'Mode']
 namespace sumobit {
 
 brakeMotor(MotorChannel.M1);
@@ -78,6 +78,6 @@ export function i2cWrite(register: number, data: number): void {
     buffer[1] = data;
     pins.i2cWriteBuffer(I2C_ADDRESS, buffer);
 }
-
+    
 
 }

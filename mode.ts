@@ -25,7 +25,7 @@ export function readModeValue(): number {
 * @param modevalue The current DIP position. eg: 7
 */
 //% group="Mode"
-//% weight=15
+//% weight=14
 //% blockGap=40
 //% blockId=sumobit_check_mode_value
 //% block="Mode % modevalue"

@@ -7,8 +7,8 @@
  *******************************************************************************/
 
 
-const MOTORCURRENT1_EVENT_SOURCE = 0x02;
-const MOTORCURRENT2_EVENT_SOURCE = 0x03;
+const MOTORCURRENT_EVENT_SOURCE = 0x02;
+
 
 enum MotorSelect {
     M1 = 0,
@@ -50,7 +50,9 @@ namespace sumobit {
     let eventType = 0;
 
     // Array for mode value.
-    let modevalueArray: number[] = [];
+    let thresholdsArray: number[] = [];
+    let compareTypesArray: CompareType[] = [];
+    let motorArray: CompareSelect[] = [];
 
     // Array for old compare result.
     let oldCompareResult: boolean[] = [];
@@ -104,7 +106,7 @@ namespace sumobit {
         let result = false;
         let a = readM1CurrentValue();
         let b = readM2CurrentValue();
-
+        
 
         switch (motor) {
             case CompareSelect.M1:
@@ -118,7 +120,7 @@ namespace sumobit {
             break;
 
             case CompareSelect.AND:
-                if (((a > threshold && b > threshold) && CompareType.MoreThan) || ((a > threshold && b > threshold) && CompareType.LessThan)){
+            if (((a > threshold && b > threshold) && CompareType.MoreThan) || ((a > threshold && b > threshold) && CompareType.LessThan)){
             result = true;
             }
             break;
@@ -128,4 +130,67 @@ namespace sumobit {
     }
 
  
+
+
+
+/**
+* Compare the potentiometer value with a number and do something when true.
+* @param compareType More than or less than.
+* @param threshold The value to compare with. eg: 512
+* @param handler Code to run when the event is raised.
+*/
+//% weight=10
+//% blockGap=8
+//% blockId=edubit_potentiometer_event
+//% block="on current value of %motor are %compareType %threshold"
+//% threshold.min=0 threshold.max=1023
+export function onEvent(motor: CompareSelect, compareType: CompareType, threshold: number, handler: Action): void {
+    // Use a new event type everytime a new event is create.
+    eventType++;
+
+    // Add the event info to the arrays.
+    motorArray.push(motor);
+    compareTypesArray.push(compareType);
+    thresholdsArray.push(threshold);
+
+    // Create a placeholder for the old compare result.
+    oldCompareResult.push(false);
+
+    // Register the event.
+    control.onEvent(MOTORCURRENT_EVENT_SOURCE, eventType, handler);
+
+    // Create a function in background if haven't done so.
+    // This function will check for pot value and raise the event if the condition is met.
+    if (bgFunctionCreated == false) {
+        control.inBackground(function () {
+
+            while (true) {
+                // Loop for all the event created.
+                for (let i = 0; i < eventType; i++) {
+                   
+                    // Check if the condition is met.
+                    if (compareCurrent(motorArray[i], compareTypesArray[i], thresholdsArray[i]) == true) {
+                        // Raise the event if the compare result changed from false to true.
+                        if (oldCompareResult[i] == false) {
+                            control.raiseEvent(MOTORCURRENT_EVENT_SOURCE, i + 1);
+                        }
+
+                        // Save old compare result.
+                        oldCompareResult[i] = true;
+                    }
+                    else {
+                        // Save old compare result.
+                        oldCompareResult[i] = false;
+                    }
+                    basic.pause(10)
+                }
+            }
+
+        });
+
+        bgFunctionCreated = true;
+    }
+
+}
+
 }

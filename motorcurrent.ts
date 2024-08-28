@@ -98,7 +98,7 @@ namespace sumobit {
     //% weight=11
     //% blockGap=40
     //% blockId=sumobit_compare_current_value
-    //% block="%motor %compareType threshold"
+    //% block="%motor %compareType %threshold"
     //% threshold.min=0 threshold.max=15 REG_ADD_AN1_HIGH
     export function compareCurrent(motor: CompareSelect, compareType: CompareType,  threshold: number,): boolean {
         let result = false;

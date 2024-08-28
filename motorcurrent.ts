@@ -134,16 +134,18 @@ namespace sumobit {
 
 
 /**
-* Compare the potentiometer value with a number and do something when true.
+* Compare the motor current value with a number and do something when true.
+* @param motor M1, M2 or Both.
 * @param compareType More than or less than.
-* @param threshold The value to compare with. eg: 512
+* @param threshold The value to compare with. eg: 7.00
 * @param handler Code to run when the event is raised.
 */
+//% group="Motor Current"
 //% weight=10
 //% blockGap=8
-//% blockId=edubit_potentiometer_event
-//% block="on current value of %motor are %compareType %threshold"
-//% threshold.min=0 threshold.max=1023
+//% blockId=sumobit_motorcurrent_event
+//% block="on %motor current value %compareType %threshold"
+//% threshold.min=0.00 threshold.max=15.00
 export function onEvent(motor: CompareSelect, compareType: CompareType, threshold: number, handler: Action): void {
     // Use a new event type everytime a new event is create.
     eventType++;

@@ -11,7 +11,8 @@
         "main.ts",
         "README.md",
         "motor.ts",
-        "mode.ts"
+        "mode.ts",
+        "motorcurrent.ts"
     ],
     "testFiles": [
         "test.ts"

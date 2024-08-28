@@ -6,14 +6,7 @@
  * Email:   support@cytron.io
  *******************************************************************************/
 
-// Motor channel.
-enum MotorChannel {
-    M1 = 0,
-    M2 = 1,
 
-    //% block="all"
-    All = 1000,
-};
 
 // Motor direction.
 enum MotorDirection {
@@ -36,6 +29,15 @@ enum ServoChannel {
 
 
 namespace sumobit {
+
+    // Motor channel.
+    export enum MotorChannel {
+        M1 = 0,
+        M2 = 1,
+
+        //% block="all"
+        All = 1000,
+    };
 
     /**
      * Brake the motor

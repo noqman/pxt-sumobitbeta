@@ -54,13 +54,13 @@ let result = false;
 
 /**
 * Check current mode value and do something when true.
-* @param modevalue The value to compare with. eg: 512
+* @param modevalue The current mode value. eg: 7
 * @param handler Code to run when the event is raised.
 */
 //% weight=13
 //% blockGap=8
 //% blockId=sumobit_mode_event
-//% block="on MODE value %modevalue"
+//% block="on mode value %modevalue"
 //% modevalue.min=0 modevalue.max=15
 export function onModeEvent(modevalue: number, handler: Action): void {
 // Use a new event type everytime a new event is create.

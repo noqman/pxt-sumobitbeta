@@ -12,7 +12,8 @@
         "README.md",
         "motor.ts",
         "mode.ts",
-        "motorcurrent.ts"
+        "motorcurrent.ts",
+        "opponent.ts"
     ],
     "testFiles": [
         "test.ts"

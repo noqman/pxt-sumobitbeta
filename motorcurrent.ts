@@ -13,9 +13,6 @@ const MOTORCURRENT_EVENT_SOURCE = 0x02;
 enum MotorSelect {
     M1 = 0,
     M2 = 1,
-    
-    //% block="either one"
-    OR = 500,
 
     //% block="both"
     AND = 1000
@@ -25,9 +22,6 @@ enum MotorSelect {
 enum CompareSelect {
     M1 = 0,
     M2 = 1,
-
-    ////% block="either one"
-    //OR = 500,
 
     //% block="both"
     AND = 1000

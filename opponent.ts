@@ -27,7 +27,7 @@ namespace sumobit{
      * Return true if Maker Object is low (Object detected). 
      */
     //% group="Opponent Sensors"
-    //% weight=10
+    //% weight= 5
     //% blockGap=8
     //% blockId=sumobit_maker_object_detect_opponent
     //% block="%position sensor detect opponent"

@@ -24,7 +24,7 @@ namespace sumobit {
  * Return mode value (0-15).
  */
 //% group="Mode"
-//% weight=26
+//% weight=14
 //% blockGap=8
 //% blockId=sumobit_read_mode_value
 //% block="mode"
@@ -37,7 +37,7 @@ export function readModeValue(): number {
 * @param modevalue The current DIP position. eg: 7
 */
 //% group="Mode"
-//% weight= 25
+//% weight= 12
 //% blockGap=40
 //% blockId=sumobit_check_mode_value
 //% block="Mode %modevalue"
@@ -57,7 +57,8 @@ let result = false;
 * @param modevalue The current mode value. eg: 7
 * @param handler Code to run when the event is raised.
 */
-//% weight= 24
+//% group="Mode"
+//% weight= 11
 //% blockGap=8
 //% blockId=sumobit_mode_event
 //% block="on mode value %modevalue"

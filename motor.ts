@@ -152,7 +152,7 @@ namespace sumobit {
      */
     //% group="Servos"
     //% weight=28
-    //% blockGap=40
+    //% blockGap=8
     //% blockId=sumobit_set_servo_position
     //% block="set servo %servo position to %position degrees"
     //% position.min=0 position.max=180

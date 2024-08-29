@@ -21,7 +21,7 @@ const REG_ADD_RESET = 14;
 * Blocks for SUMO:BIT.
 */
 //% weight=30 color=#ff8000 icon="\uf6a7" block="SUMO:BIT"
-//% groups=['DC Motors', 'Servos' , 'Mode', 'Opponent Sensors']
+//% groups=['DC Motors', 'Servos' , 'Mode', 'Opponent Sensors',]
 namespace sumobit {
 
 brakeMotor(MotorChannel.M1);

@@ -28,7 +28,7 @@ namespace sumobit{
      * @param .
      */
     //% group="Opponent Sensor"
-    //% weight=38
+    //% weight=39
     //% blockGap=8
     //% blockId=sumobit_maker_object_detect_opponent
     //% block="%position sensor detect opponent"

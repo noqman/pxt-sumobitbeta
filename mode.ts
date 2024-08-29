@@ -37,7 +37,7 @@ export function readModeValue(): number {
 * @param modevalue The current DIP position. eg: 7
 */
 //% group="Mode"
-//% weight=44
+//% weight=45
 //% blockGap=40
 //% blockId=sumobit_check_mode_value
 //% block="Mode %modevalue"
@@ -57,7 +57,7 @@ let result = false;
 * @param modevalue The current mode value. eg: 7
 * @param handler Code to run when the event is raised.
 */
-//% weight=43
+//% weight=44
 //% blockGap=8
 //% blockId=sumobit_mode_event
 //% block="on mode value %modevalue"

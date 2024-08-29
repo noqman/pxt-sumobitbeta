@@ -24,7 +24,7 @@ namespace sumobit {
  * Return mode value (0-15).
  */
 //% group="Mode"
-//% weight=26
+//% weight= 26
 //% blockGap=8
 //% blockId=sumobit_read_mode_value
 //% block="mode"

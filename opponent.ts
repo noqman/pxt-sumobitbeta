@@ -21,13 +21,54 @@ enum SensorPosition {
     None = 6
 }
 
+let L  = pins.digitalReadPin(DigitalPin.P16);
+let FL = pins.digitalReadPin(DigitalPin.P15);
+let FC = pins.digitalReadPin(DigitalPin.P14);
+let FR = pins.digitalReadPin(DigitalPin.P13);
+let R  = pins.digitalReadPin(DigitalPin.P12);
 
 
 namespace sumobit{
 
+    let L = pins.digitalReadPin(DigitalPin.P16);
+    let FL = pins.digitalReadPin(DigitalPin.P15);
+    let FC = pins.digitalReadPin(DigitalPin.P14);
+    let FR = pins.digitalReadPin(DigitalPin.P13);
+    let R = pins.digitalReadPin(DigitalPin.P12);
+
 
     /**
-     * Return true if Maker Object is low (Object detected). 
+    * Give each. 
+    */
+    //% group="Opponent Sensors"
+    //% weight= 4
+    //% blockGap=8
+    //% blockId=sumobit_maker_object_detect_opponent
+    //% block="%position sensor detect opponent"
+    export function OppSensorValue(position: SensorPosition): number {
+        let L = pins.digitalReadPin(DigitalPin.P16);
+        let FL = pins.digitalReadPin(DigitalPin.P15);
+        let FC = pins.digitalReadPin(DigitalPin.P14);
+        let FR = pins.digitalReadPin(DigitalPin.P13);
+        let R = pins.digitalReadPin(DigitalPin.P12);
+
+        switch (position) {
+        case SensorPosition.Left2:
+        return L;
+        case SensorPosition.Left1:
+        return FL;
+        case SensorPosition.Center:
+        return FC;
+        case SensorPosition.Right1:
+        return FR;
+        case SensorPosition.Right2:
+        return R;
+        }
+    
+    }
+
+    /**
+     * Return true if the Maker Object is low (Obstacle detected). 
      */
     //% group="Opponent Sensors"
     //% weight= 5
@@ -35,12 +76,7 @@ namespace sumobit{
     //% blockId=sumobit_maker_object_detect_opponent
     //% block="%position sensor detect opponent"
     //% position.fieldEditor="gridpicker" position.fieldOptions.columns=5
-    export function isSensorDetectedOn(position: SensorPosition): boolean {
-        let L = pins.digitalReadPin(DigitalPin.P16);
-        let FL = pins.digitalReadPin(DigitalPin.P15);
-        let FC = pins.digitalReadPin(DigitalPin.P14);
-        let FR = pins.digitalReadPin(DigitalPin.P13);
-        let R = pins.digitalReadPin(DigitalPin.P12);
+    export function OppSensorDetection(position: SensorPosition): boolean {
 
         switch (position) {
             case SensorPosition.None:

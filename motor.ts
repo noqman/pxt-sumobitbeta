@@ -44,7 +44,7 @@ namespace sumobit {
      * @param motor Motor channel. eg: Motor.M1, Motor.M2
      */
     //% group="DC Motors"
-    //% weight=30
+    //% weight=29
     //% blockGap=8
     //% blockId=sumobit_brake_motor
     //% block="brake motor %motor"
@@ -77,7 +77,7 @@ namespace sumobit {
      * @param speed Motor speed (0-255). eg: 128
      */
     //% group="DC Motors"
-    //% weight=29
+    //% weight=30
     //% blockGap=40
     //% blockId=sumobit_run_motor
     //% block="run motor %motor %direction at speed %speed"

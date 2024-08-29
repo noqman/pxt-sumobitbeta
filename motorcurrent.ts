@@ -56,7 +56,7 @@ namespace sumobit {
      * Return motor 1 current value.
      */
     //% group="Motor Current"
-    //% weight=10
+    //% weight=23
     //% blockGap=8
     //% blockId=sumobit_read_m1_current_value
     //% block="motor 1 current"
@@ -72,7 +72,7 @@ namespace sumobit {
      * Return motor 2 current value.
      */
     //% group="Motor Current"
-    //% weight=9
+    //% weight=22
     //% blockGap=8
     //% blockId=sumobit_read_m2_current_value
     //% block="motor 2 current"
@@ -91,7 +91,7 @@ namespace sumobit {
     * @param threshold The current DIP position. eg: 14.00
     */
     //% group="Motor Current"
-    //% weight=8
+    //% weight=21
     //% blockGap=40
     //% blockId=sumobit_compare_current_value
     //% block="%motor current %compareType %threshold"
@@ -135,7 +135,7 @@ namespace sumobit {
 * @param handler Code to run when the event is raised.
 */
 //% group="Motor Current"
-//% weight=6
+//% weight=20
 //% blockGap=40
 //% blockId=sumobit_motorcurrent_event
 //% block="on %motor current value %compareType %threshold"

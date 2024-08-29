@@ -44,7 +44,7 @@ namespace sumobit {
      * @param motor Motor channel. eg: Motor.M1, Motor.M2
      */
     //% group="DC Motors"
-    //% weight=20
+    //% weight=30
     //% blockGap=8
     //% blockId=sumobit_brake_motor
     //% block="brake motor %motor"
@@ -77,7 +77,7 @@ namespace sumobit {
      * @param speed Motor speed (0-255). eg: 128
      */
     //% group="DC Motors"
-    //% weight=18
+    //% weight=29
     //% blockGap=40
     //% blockId=sumobit_run_motor
     //% block="run motor %motor %direction at speed %speed"
@@ -130,7 +130,7 @@ namespace sumobit {
      * @param servo Servo channel.
      */
     //% group="Servos"
-    //% weight=17
+    //% weight=28
     //% blockGap=8
     //% blockId=sumobit_disable_servo
     //% block="disable servo %servo"
@@ -151,7 +151,7 @@ namespace sumobit {
      * @param position Servo positon. eg: 90
      */
     //% group="Servos"
-    //% weight=15
+    //% weight=27
     //% blockGap=40
     //% blockId=sumobit_set_servo_position
     //% block="set servo %servo position to %position degrees"

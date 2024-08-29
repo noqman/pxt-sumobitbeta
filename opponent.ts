@@ -1,27 +1,30 @@
+enum SensorPosition {
+    //% block="left"
+    Left2 = 0,
+
+    //% block="front left"
+    Left1 = 1,
+
+    //% block="front center"
+    Center = 2,
+
+    //% block="front right"
+    Right1 = 3,
+
+    //% block="right"
+    Right2 = 4,
+
+    //% block="all"
+    All = 5,
+
+    //% block="none"
+    None = 6
+}
+
+
+
 namespace sumobit{
 
-    enum SensorPosition {
-        //% block="left"
-        Left2 = 0,
-
-        //% block="front left"
-        Left1 = 1,
-
-        //% block="front center"
-        Center = 2,
-
-        //% block="front right"
-        Right1 = 3,
-
-        //% block="right"
-        Right2 = 4,
-
-        //% block="all"
-        All = 5,
-
-        //% block="none"
-        None = 6
-    }
 
     /**
      * Return true if Maker Object is low (Object detected). 

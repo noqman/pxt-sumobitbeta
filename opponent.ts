@@ -35,11 +35,11 @@ namespace sumobit{
     //% group="Opponent Sensors"
     //% weight=18
     //% blockGap=8
-    //% blockId=sumobit_maker_object_detect_opponent
-    //% block="%position sensor detect opponent"
-    export function OppSensorValue(position: SensorPosition): number {
+    //% blockId=sumobit_maker_object_read_digital
+    //% block="Read %sensor value"
+    export function OppSensorValue(sensor: SensorPosition): number {
 
-        switch (position) {
+        switch (sensor) {
             case SensorPosition.Left2:
                 return pins.digitalReadPin(DigitalPin.P16);
             case SensorPosition.Left1:

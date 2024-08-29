@@ -27,18 +27,40 @@ let FC = pins.digitalReadPin(DigitalPin.P14);
 let FR = pins.digitalReadPin(DigitalPin.P13);
 let R  = pins.digitalReadPin(DigitalPin.P12);
 
-
 namespace sumobit{
 
+    /**
+    * Give each. 
+    */
+    //% group="Opponent Sensors"
+    //% weight=18
+    //% blockGap=8
+    //% blockId=sumobit_maker_object_detect_opponent
+    //% block="%position sensor detect opponent"
+    export function OppSensorValue(position: SensorPosition): number {
 
-    
-    
+        switch (position) {
+            case SensorPosition.Left2:
+                return pins.digitalReadPin(DigitalPin.P16);
+            case SensorPosition.Left1:
+                return pins.digitalReadPin(DigitalPin.P15);
+            case SensorPosition.Center:
+                return pins.digitalReadPin(DigitalPin.P14);
+            case SensorPosition.Right1:
+                return pins.digitalReadPin(DigitalPin.P13);
+            case SensorPosition.Right2:
+                return pins.digitalReadPin(DigitalPin.P12);
+                    default:
+            return -1;
+        }
+
+    }
 
     /**
      * Return true if the Maker Object is low (Obstacle detected). 
      */
     //% group="Opponent Sensors"
-    //% weight= 5
+    //% weight=17
     //% blockGap=8
     //% blockId=sumobit_maker_object_detect_opponent
     //% block="%position sensor detect opponent"

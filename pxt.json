@@ -13,7 +13,8 @@
         "motor.ts",
         "mode.ts",
         "motorcurrent.ts",
-        "opponent.ts"
+        "opponent.ts",
+        "edge.ts"
     ],
     "testFiles": [
         "test.ts"

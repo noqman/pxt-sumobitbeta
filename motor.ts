@@ -78,7 +78,7 @@ namespace sumobit {
      */
     //% group="DC Motors"
     //% weight=30
-    //% blockGap=40
+    //% blockGap=8
     //% blockId=sumobit_run_motor
     //% block="run motor %motor %direction at speed %speed"
     //% speed.min=0 speed.max=255

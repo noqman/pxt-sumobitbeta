@@ -38,7 +38,7 @@ export function readModeValue(): number {
 */
 //% group="Mode"
 //% weight= 25
-//% blockGap=8
+//% blockGap=40
 //% blockId=sumobit_check_mode_value
 //% block="Mode %modevalue"
 //% modevalue.min=0 modevalue.max=15
@@ -59,7 +59,7 @@ let result = false;
 */
 //% group="Mode"
 //% weight= 24
-//% blockGap=40
+//% blockGap=8
 //% blockId=sumobit_mode_event
 //% block="on mode value %modevalue"
 //% modevalue.min=0 modevalue.max=15

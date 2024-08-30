@@ -20,6 +20,8 @@ enum PotCompareType {
     LessThan = 1
 }
 
+namespace sumobit{
+
 /**
   * Return right edge sensor value (0-1023).
   */
@@ -42,4 +44,5 @@ return pins.analogReadPin(EDGE_R_PIN);
 //% block="left edge sensor value"
 function readEdgeLValue(): number {
     return pins.analogReadPin(EDGE_L_PIN);
+}
 }

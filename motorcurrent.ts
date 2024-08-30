@@ -23,7 +23,7 @@ enum CompareSelect {
     M1 = 0,
     M2 = 1,
 
-    //% block="both"
+    //% block="M1 and M2"
     AND = 1000
 
 }

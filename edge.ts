@@ -58,7 +58,7 @@ export function readEdgeLValue(): number {
 //% weight=14
 //% blockGap=40
 //% blockId=sumobit_compare_edge_value
-//% block="%side value %compareType %threshold"
+//% block="%side edge sensor value %compareType %threshold"
 //% threshold.min=0 threshold.max=1023
 export function compareEdge(side: EdgeSide, compareType: EdgeCompareType, threshold: number,): boolean {
 

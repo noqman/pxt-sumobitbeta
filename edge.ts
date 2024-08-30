@@ -23,7 +23,8 @@ enum PotCompareType {
 /**
   * Return right edge sensor value (0-1023).
   */
-//% weight=16
+//% group="Edge Sensor"
+//% weight=15
 //% blockGap=8
 //% blockId=sumobit_read_edge_R_value
 //% block="right edge sensor value"
@@ -34,7 +35,8 @@ return pins.analogReadPin(EDGE_R_PIN);
 /**
   * Return left edge sensor value (0-1023).
   */
-//% weight=15
+//% group="Edge Sensor"
+//% weight=16
 //% blockGap=8
 //% blockId=sumobit_read_edge_R_value
 //% block="left edge sensor value"

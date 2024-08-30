@@ -1,8 +1,15 @@
 // Default pin.
-const POTENTIO_BIT_PIN = DigitalPin.P2;
+const EDGE_R_PIN = AnalogPin.P0;
+const EDGE_L_PIN = AnalogPin.P1;
 
 // Event source.
-const POTENTIO_BIT_EVENT_SOURCE = EventBusSource.MICROBIT_ID_IO_P2;
+const EDGE_SENSOR_EVENT_SOURCE = 0x03;
+
+enum EdgeSide{
+  Right = 0,
+  Left =1,
+  Both = 1000
+}
 
 // Comparison type.
 enum PotCompareType {
@@ -11,15 +18,26 @@ enum PotCompareType {
 
     //% block="<"
     LessThan = 1
-};
+}
 
 /**
-  * Return potentiometer value (0-1023).
+  * Return right edge sensor value (0-1023).
   */
-//% weight=20
+//% weight=16
 //% blockGap=8
-//% blockId=edubit_read_pot_value
-//% block="potentiometer value"
-function readPotValue(): number {
-    return pins.digitalReadPin(POTENTIO_BIT_PIN);
+//% blockId=sumobit_read_edge_R_value
+//% block="right edge sensor value"
+function readEdgeRValue(): number {
+return pins.analogReadPin(EDGE_R_PIN);
+}
+
+/**
+  * Return left edge sensor value (0-1023).
+  */
+//% weight=15
+//% blockGap=8
+//% blockId=sumobit_read_edge_R_value
+//% block="left edge sensor value"
+function readEdgeLValue(): number {
+    return pins.analogReadPin(EDGE_L_PIN);
 }

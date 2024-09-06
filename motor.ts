@@ -32,10 +32,10 @@ namespace sumobit {
 
     // Motor channel.
     export enum MotorChannel {
-        M1 = 0,
-        M2 = 1,
+        MR = 0,
+        ML = 1,
 
-        //% block="all"
+        //% block="both"
         All = 1000,
     };
 
@@ -50,12 +50,12 @@ namespace sumobit {
     //% block="brake motor %motor"
     export function brakeMotor(motor: MotorChannel): void {
         switch (motor) {
-            case MotorChannel.M1:
+            case MotorChannel.MR:
                 sumobit.i2cWrite(REG_ADD_PWM1, 0);
                 sumobit.i2cWrite(REG_ADD_DIR1, 0);
                 break;
 
-            case MotorChannel.M2:
+            case MotorChannel.ML:
                 sumobit.i2cWrite(REG_ADD_PWM2, 0);
                 sumobit.i2cWrite(REG_ADD_DIR2, 0);
                 break;
@@ -85,7 +85,7 @@ namespace sumobit {
     export function runMotor(motor: MotorChannel, direction: MotorDirection, speed: number): void {
         speed = sumobit.limit(speed, 0, 255);
         switch (motor) {
-            case MotorChannel.M1:
+            case MotorChannel.MR:
                 if (direction == MotorDirection.Forward) {
                     sumobit.i2cWrite(REG_ADD_PWM1, speed);
                     sumobit.i2cWrite(REG_ADD_DIR1, 0);
@@ -96,7 +96,7 @@ namespace sumobit {
                 }
                 break;
 
-            case MotorChannel.M2:
+            case MotorChannel.ML:
                 if (direction == MotorDirection.Forward) {
                     sumobit.i2cWrite(REG_ADD_PWM2, speed);
                     sumobit.i2cWrite(REG_ADD_DIR2, 0);

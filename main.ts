@@ -24,8 +24,8 @@ const REG_ADD_RESET = 14;
 //% groups=['DC Motors', 'Servos' , 'Mode', 'Motor Current','Opponent Sensors' , 'Edge Sensors']
 namespace sumobit {
 
-brakeMotor(MotorChannel.M1);
-brakeMotor(MotorChannel.M2);
+brakeMotor(MotorChannel.MR);
+brakeMotor(MotorChannel.ML);
 
 // Disable the servos.
 disableServo(ServoChannel.S1);

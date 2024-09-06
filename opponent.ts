@@ -1,3 +1,6 @@
+
+
+
 enum SensorPosition {
     //% block="left"
     Left2 = 0,
@@ -37,6 +40,12 @@ enum Sensor{
     //% block="right"
     Right2 = 4,
 }
+
+pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P14, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P13, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
 
 let L  = pins.digitalReadPin(DigitalPin.P16);
 let FL = pins.digitalReadPin(DigitalPin.P15);

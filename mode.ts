@@ -63,6 +63,7 @@ let result = false;
 //% blockId=sumobit_mode_event
 //% block="on mode value %modevalue"
 //% modevalue.min=0 modevalue.max=15
+//% blockHidden=true
 export function onModeEvent(modevalue: number, handler: Action): void {
 // Use a new event type everytime a new event is create.
         eventType++;

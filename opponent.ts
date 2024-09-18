@@ -71,7 +71,7 @@ namespace sumobit{
             case Sensor.Left2:
                 return pins.digitalReadPin(DigitalPin.P16);
             case Sensor.Left1:
-                return FL;
+                return pins.digitalReadPin(DigitalPin.P15);;
             case Sensor.Center:
                 return pins.digitalReadPin(DigitalPin.P14);
             case Sensor.Right1:

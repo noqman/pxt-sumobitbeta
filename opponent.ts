@@ -43,11 +43,7 @@ enum Sensor{
 
 
 
-let L  = pins.digitalReadPin(DigitalPin.P16);
-let FL = pins.digitalReadPin(DigitalPin.P15);
-let FC = pins.digitalReadPin(DigitalPin.P14);
-let FR = pins.digitalReadPin(DigitalPin.P13);
-let R  = pins.digitalReadPin(DigitalPin.P12);
+
 
 namespace sumobit{
 
@@ -93,6 +89,14 @@ namespace sumobit{
     //% block="%position sensor detect opponent"
     //% position.fieldEditor="gridpicker" position.fieldOptions.columns=5
     export function OppSensorDetection(position: SensorPosition): boolean {
+
+
+
+        let L = OppSensorValue(0);
+        let FL = OppSensorValue(1);
+        let FC = OppSensorValue(2);
+        let FR = OppSensorValue(3);
+        let R = OppSensorValue(4);
 
         switch (position) {
             case SensorPosition.None:

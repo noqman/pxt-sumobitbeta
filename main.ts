@@ -17,6 +17,12 @@ const REG_ADD_AN2_LOW = 12;
 const REG_ADD_DIP = 13;
 const REG_ADD_RESET = 14;
 
+pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P14, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P13, PinPullMode.PullUp)
+pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
+
 /**
 * Blocks for SUMO:BIT.
 */

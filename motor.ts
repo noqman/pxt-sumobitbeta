@@ -19,8 +19,8 @@ enum MotorDirection {
 
 // Servo Channel.
 enum ServoChannel {
-    S1 = REG_ADD_SERVO_1,
-    S2 = REG_ADD_SERVO_2,
+    S1 = REG_ADD_SRV1_POS,
+    S2 = REG_ADD_SRV2_POS,
 
     //% block="all"
     All = 1000,

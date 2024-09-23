@@ -2,20 +2,30 @@ const I2C_ADDRESS = 0x09;
 
 // Register address.
 const REG_ADD_REVISION = 0;
-const REG_ADD_SERVO_1 = 1;
-const REG_ADD_SERVO_2 = 2;
-const REG_ADD_PWM1 = 3;
-const REG_ADD_DIR1 = 4;
-const REG_ADD_PWM2 = 5;
-const REG_ADD_DIR2 = 6;
-const REG_ADD_VIN_HIGH = 7;
-const REG_ADD_VIN_LOW = 8;
-const REG_ADD_AN1_HIGH = 9;
-const REG_ADD_AN1_LOW = 10;
-const REG_ADD_AN2_HIGH = 11;
-const REG_ADD_AN2_LOW = 12;
-const REG_ADD_DIP = 13;
-const REG_ADD_RESET = 14;
+const REG_ADD_SRV1_POS = 1;
+const REG_ADD_SRV1_SPEED = 2;
+const REG_ADD_SRV2_POS = 3;
+const REG_ADD_SRV2_SPEED = 4;
+const REG_ADD_PWM1 = 9;
+const REG_ADD_DIR1 = 10;
+const REG_ADD_ACCEL1 = 11;
+const REG_ADD_PWM2 = 12;
+const REG_ADD_DIR2 = 13;
+const REG_ADD_ACCEL2 = 14;
+const REG_ADD_AN1_HIGH = 19;
+const REG_ADD_AN1_LOW = 20;
+const REG_ADD_AN2_HIGH = 21;
+const REG_ADD_AN2_LOW = 22;
+const REG_ADD_VIN_HIGH = 25;
+const REG_ADD_VIN_LOW = 26;
+const REG_ADD_R0 = 29;
+const REG_ADD_G0 = 30;
+const REG_ADD_B0 = 31;
+const REG_ADD_R1 = 32;
+const REG_ADD_G1 = 33;
+const REG_ADD_B1 = 34;
+const REG_ADD_DIP = 35;
+const REG_ADD_RESET = 36;
 
 pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
 pins.setPull(DigitalPin.P15, PinPullMode.PullUp)
@@ -27,7 +37,7 @@ pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
 * Blocks for SUMO:BIT.
 */
 //% weight=10 color=#ff8000 icon="\uf6a7" block="SUMO:BIT"
-//% groups=['DC Motors', 'Servos' , 'Mode', 'Motor Current','Opponent Sensors' , 'Edge Sensors']
+//% groups=['DC Motors', 'Servos' , 'Mode', 'Motor Current','Opponent Sensors' , 'Edge Sensors', 'RGB LED']
 namespace sumobit {
 
 brakeMotor(MotorChannel.MR);

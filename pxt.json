@@ -17,7 +17,8 @@
         "motorcurrent.ts",
         "opponent.ts",
         "edge.ts",
-        "battery.ts"
+        "battery.ts",
+        "rgb.ts"
     ],
     "testFiles": [
         "test.ts"

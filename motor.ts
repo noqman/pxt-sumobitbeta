@@ -159,13 +159,13 @@ namespace sumobit {
     export function setServoPosition(servo: ServoChannel, position: number): void {
         position = sumobit.limit(position, 0, 180);
 
-        let pulseWidth = position * 20 / 18 + 50
+        // pulseWidth = position * 20 / 18 + 50
         if (servo == ServoChannel.All) {
-            sumobit.i2cWrite(ServoChannel.S1, pulseWidth);
-            sumobit.i2cWrite(ServoChannel.S2, pulseWidth);
+            sumobit.i2cWrite(ServoChannel.S1, position);
+            sumobit.i2cWrite(ServoChannel.S2, position);
         }
         else {
-            sumobit.i2cWrite(servo, pulseWidth);
+            sumobit.i2cWrite(servo, position);
         }
     }
 

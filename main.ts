@@ -48,7 +48,7 @@ pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
 /**
 * Blocks for SUMO:BIT.
 */
-//% weight=10 color=#ff8000 icon="\F5E1" block="SUMO:BIT"
+//% weight=10 color=#ff8000 icon="\uf5e1" block="SUMO:BIT"
 //% groups=['DC Motors', 'Servos' , 'Mode', 'Motor Current','Opponent Sensors' , 'Edge Sensors', 'RGB LED']
 namespace sumobit {
 

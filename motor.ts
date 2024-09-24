@@ -81,7 +81,7 @@ namespace sumobit {
     //% weight=30
     //% blockGap=8
     //% blockId=sumobit_run_motor
-    //% block="run motor %motor %direction at speed %speed" with %accel acceleration
+    //% block="run motor %motor %direction at speed %speed" with %accel acceleration factor
     //% speed.min=0 speed.max=255
     export function runMotor(motor: MotorChannel, direction: MotorDirection, speed: number, acceleration: number): void {
         speed = sumobit.limit(speed, 0, 255);

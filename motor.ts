@@ -81,7 +81,7 @@ namespace sumobit {
     //% weight=30
     //% blockGap=8
     //% blockId=sumobit_run_motor
-    //% block="run motor %motor %direction at speed %speed" with %accel acceleration factor
+    //% block="run motor %motor %direction at speed %speed with %accel acceleration factor"
     //% speed.min=0 speed.max=255
     //% accel.min=0 accel.max=255
     export function runMotor(motor: MotorChannel, direction: MotorDirection, speed: number, accel: number): void {
